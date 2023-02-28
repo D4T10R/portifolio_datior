@@ -1,0 +1,41 @@
+.cabecalho {
+    background: var(--cor-fundo);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.material-symbols-outlined {
+    color: white;
+    font-size: 4em;
+}
+
+.opcoes {
+    display: none;
+    position: absolute;
+    background: var(--cor-fundo-opcoes);
+    border: 5px solid black;
+    padding: 1em 0 0 1em    ;
+    width: 45%;
+    top: 1%;
+    border-radius: 10px;
+}
+
+.opcoes__lista {
+    list-style-type: none;
+
+}
+
+.opcoes__itens {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Nova Round', cursive;
+    font-size: 32px;
+    
+    margin-bottom: 0.3em;
+}
+
+.opcoes__itens a {
+    color: white;
+    text-decoration: none;
+}
+

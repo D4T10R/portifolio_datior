@@ -4,17 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
     <title>Datior home</title>
 </head>
 <body>
     
-    <header>
-        
+    <header class="cabecalho">
+        <span class="material-symbols-outlined" id="icone-menu"> menu </span>
+        <div class="opcoes" id="opcoes">
+            <ul class="opcoes__lista">
+                <li class="opcoes__itens">
+                    <a href="#">Home</a>
+                </li>
+                <li class="opcoes__itens">
+                    <a href="#">Sobre</a>
+                </li>
+                <li class="opcoes__itens">
+                    <a href="#">Skills</a>
+                </li>
+                <li class="opcoes__itens">
+                    <a href="#">Projetos</a>
+                </li>
+                <li class="opcoes__itens">
+                    <a href="#">Contatos</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
-    <main></main>
+    <main id="corpo" class="corpo">
 
-    <footer></footer>
+
+        <section class="apresentacao">
+
+            <div class="apresentacao__imagem">
+                <img src="../img/rosto.svg" alt="">
+            </div>
+            <div class="apresentacao__descricao">
+                <h1 class="apresentacao__descricao__titulo-principal">DATIOR</h1>
+                <h2 class="apresentacao__descricao__titulo-secundario">Leonardo Weder</h2>
+                <p class="apresentacao__descricao__texto">Olá, sou um front-end. Buscando inovasão e evolução.</p>
+            </div>
+
+        </section>
+
+        <section class="skills">
+            <h2 class="skills__titulo titulos">Skills</h2>
+            <div>
+                <ul class="skills__listas">
+                    <li>
+                        <img src="../img/icone-html.svg" alt="Icone HTML">
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <img src="../img/icone-css.svg" alt="Icone CSS3">
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <img src="../img/icone-js.svg" alt="Icone JS">
+                        <p>JavaScript</p>
+                    </li>
+                </ul>
+                <ul class="skills__listas">
+                    <li>
+                        <img src="../img/icone-git.svg" alt="Icone GIT">
+                        <p>GIT</p>
+                    </li>
+                    <li>
+                        <img src="../img/icone-sql.svg" alt="Icone SQL">
+                        <p>SQL</p>
+                    </li>
+                    <li>
+                        <img src="../img/icone-java.svg" alt="Icone JAVA">
+                        <p>JAVA</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projetos">
+            <h2 class="projetos__titulo titulos">Projetos</h2>
+            <div>
+                <div class="projeto-feito projeto-um">
+                    <div class="projetos-img">
+                        <img src="../img/img-combo-alura.svg" alt="">
+                    </div>
+                    <div>
+                        <h3>combo alura</h3>
+                    </div>
+                </div>
+
+                <a href="www.google.com">
+                    <div class="projeto-feito projeto-dois">
+                        <div class="projetos-img">
+                            <img src="../img/img-combo-alura.svg" alt="">
+                        </div>
+                        <div>
+                            <h3>combo alura</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+
+    <footer class="rodape">
+        <h2 class="contato-titulo titulos">Contatos</h2>
+        <ul class="rodape__lista">
+            <li>
+                <p>telefone</p>
+                <img src="../img/icone-telefone.svg" alt="">
+                <p>(31) 9 9399-3167</p>
+            </li>
+            <li>
+                <p>email</p>
+                <img src="../img/icone-email.svg" alt="">
+                <p>leonardowederveiga@yahoo.com</p>
+            </li>
+            <li>
+                <p>local</p>
+                <img src="../img/icone-local.svg" alt="">
+                <p>Belo Horizonte, Lagoinha 100</p>
+            </li>
+        </ul>
+    </footer>
+
+
+
+
+
+    <script src="../js/main.js"></script>
 
 </body>
 </html>

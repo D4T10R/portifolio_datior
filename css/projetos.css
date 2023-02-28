@@ -1,0 +1,33 @@
+.projetos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.projetos__titulo {
+    margin: 1.5em 0;
+}
+
+.projeto-feito {
+    display: flex;
+    justify-content: space-evenly;
+
+    background: var(--cor-fundo-projeto);
+    height: 6em;
+    width: 80%;
+}
+
+.projetos-img{
+    display: flex;
+    align-items: center;   
+}
+
+.projeto-feito h3 {
+    margin-top: 0.5em;
+    color: var(--cor-texto);
+
+}
+

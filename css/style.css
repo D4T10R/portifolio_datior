@@ -1,0 +1,43 @@
+@import url("./header.css");
+@import url("./apresentacao.css");
+@import url("./skills.css");
+@import url("./projetos.css");
+@import url("./rodape.css");
+
+:root {
+    --cor-fundo: #080919;
+    --cor-fundo-opcoes: #2D3061;
+    --cor-texto: #F6FFD3;
+    --cor-titulos: #70FF00;
+    --cor-fundo-projeto: rgb(0, 15, 145, 0.7);
+
+    --font-titulos: 'Tomorrow', sans-serif;
+    --font-texto: 'Nova Round', cursive;
+    --font-texto-apresentacao: 'Space Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0.3em;
+    font-family: var(--font-texto);
+    color: var(--cor-texto);
+    background: #13F2CA;
+    padding: 8px;
+}
+
+.titulos {
+    font-family: var(--font-titulos);
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--cor-titulos);
+}
+
+
+.corpo {
+    background: var(--cor-fundo);
+}
