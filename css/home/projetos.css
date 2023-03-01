@@ -1,0 +1,43 @@
+.projetos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projetos a {
+    text-decoration: none;
+}
+
+
+.projetos__titulo {
+    margin: 1.5em 0;
+}
+
+.projeto-feito {
+    display: flex;
+    text-align: center;
+    gap: 2em;
+    background: var(--cor-fundo-projeto);
+    height: 6em;
+    width: 80%;
+    margin: 0 0 5% 10%;
+}
+
+.projetos-img{
+    display: flex;
+    align-items: center;  
+    margin-left: 2em;
+}
+
+.projeto-feito-texto h3 {
+    margin-top: 0.5em;
+    font-size: 20px;
+    color: var(--cor-titulo-projeto);
+
+}
+
+.projeto-feito-texto p {
+    margin-top: 0.5em;
+    color: var(--cor-texto);
+}
+

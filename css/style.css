@@ -1,15 +1,22 @@
-@import url("./header.css");
-@import url("./apresentacao.css");
-@import url("./skills.css");
-@import url("./projetos.css");
-@import url("./rodape.css");
+/* HOME */
+@import url("./home/header.css");
+@import url("./home/apresentacao.css");
+@import url("./home/skills.css");
+@import url("./home/projetos.css");
+@import url("./home/rodape.css");
+
+/* SKILLS */
+@import url("./skills/hard-skills.css");
+@import url("./skills/soft-skills.css");
+
 
 :root {
     --cor-fundo: #080919;
     --cor-fundo-opcoes: #2D3061;
     --cor-texto: #F6FFD3;
     --cor-titulos: #70FF00;
-    --cor-fundo-projeto: rgb(0, 15, 145, 0.7);
+    --cor-fundo-projeto: rgb(0, 15, 145, 0.5);
+    --cor-titulo-projeto: #05FF00;
 
     --font-titulos: 'Tomorrow', sans-serif;
     --font-texto: 'Nova Round', cursive;
@@ -40,4 +47,15 @@ body {
 
 .corpo {
     background: var(--cor-fundo);
+}
+
+.inicio {
+    text-align: center;
+}
+
+.inicio__titulo {
+    font-family: var(--font-titulos);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--cor-titulos);
 }

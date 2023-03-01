@@ -1,0 +1,16 @@
+.soft-skills {
+    text-align: center;
+}
+
+.soft-skills__titulo {
+    margin: 1em 0 0.5em 0;
+}
+
+.soft-skills__lista {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top : 0.5em;
+}

@@ -1,5 +1,6 @@
 const opcoes = document.querySelector('#opcoes').style
 const corpo = document.querySelector('#corpo')
+const rodape = document.querySelector('#rodape')
 
 console.log(corpo)
         
@@ -10,11 +11,20 @@ function mostrarOpcoes() {
             opcoes.display="block"
         }
     })
+
+    // Se clicar no corpo: 
     corpo.addEventListener('click', ()=> {
         if (opcoes.display === "block") {
             opcoes.display = ""
         }
         
+    })
+
+    // Se clicar no  rodape:
+    rodape.addEventListener('click', () => {
+        if (opcoes.display === "block") {
+            opcoes.display = ""
+        }
     })
 }
 

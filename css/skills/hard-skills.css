@@ -1,0 +1,16 @@
+.hard-skills {
+    text-align: center;
+}
+
+.hard-skills__titulo {
+    margin: 0.5em 0;
+}
+
+.hard-lista {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 1.5em;
+}

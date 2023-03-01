@@ -1,0 +1,25 @@
+.rodape {
+    background: var(--cor-fundo);
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    padding: 2em 0;
+}
+
+
+.rodape__tabela {
+    width: 85%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.rodape__tabela tr {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.rodape__tabela tr td {
+    display: block;
+    min-width: 17%;
+}
+                                                
