@@ -15,6 +15,9 @@
 
 .projeto-feito {
     display: flex;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 5px 3px 10px black;
     text-align: center;
     gap: 2em;
     background: var(--cor-fundo-projeto);

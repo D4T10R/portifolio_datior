@@ -1,0 +1,8 @@
+.projeto-mais__titulo {
+    font-family: var(--font-titulos);
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-titulo-projeto);
+    margin-bottom: 0.5em;
+}
