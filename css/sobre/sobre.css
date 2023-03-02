@@ -1,0 +1,30 @@
+
+.sobre {
+    text-align: center;
+}
+.sobre__titulo {
+}
+
+.sobre__titulo {
+   font-family: var(--font-titulos);
+   font-size: 32px; 
+   font-weight: 400;
+   margin-bottom: 0.5em;
+}
+
+.sobre__texto {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    font-family: var(--font-texto-apresentacao);
+    font-weight: 700;
+}
+
+.sobre__sub-titulo {
+    margin: 1.5em 0 0 0;
+}
+
+.sobre__video {
+    
+    width: 90%;
+}
