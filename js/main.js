@@ -28,3 +28,9 @@ function mostrarOpcoes() {
     })
 }
 
+/* ENVIAR FORMULARIO */
+const formulario = document.getElementById("form")
+
+formulario.addEventListener('submit', () => {
+    alert("ESTOU COMPLETANDO MEU PORTIFÓLIO! ENTRE EM CONTATO PELO MEU EMAIL ENQUANTO EU FAÇO A MANUTENÇÃO DO FORMULÁRIO")
+})

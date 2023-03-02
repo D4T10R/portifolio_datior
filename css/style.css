@@ -16,6 +16,9 @@
 /* SOBRE */
 @import url("./sobre/sobre.css");
 
+/* CONTATOS */
+@import url("./contatos/contatos.css");
+
 :root {
     --cor-fundo: #080919;
     --cor-fundo-opcoes: #2D3061;

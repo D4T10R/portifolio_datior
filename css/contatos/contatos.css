@@ -1,0 +1,48 @@
+.contato {
+    text-align: center;
+}
+
+.contato-titulo {
+    margin: 1em 0;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0.8em 0;
+}
+
+.inputs label {
+    text-align: left;
+    width: 50%;
+    padding: 0.3em 0;
+}
+
+.inputs__campos input {
+    width: 250px;
+    background: none;
+    border: 0px;
+    border-bottom: 2px solid white;
+    color: var(--cor-texto);
+}
+
+.inputs__campos input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+
+}
+
+.enviar {
+    width: 30%;
+    padding: 0.5em;
+    border-radius: 30px;
+    background: none;
+    border: 3px solid white;
+    color: var(--cor-texto);
+    font-size: 20px;
+
+
+}
