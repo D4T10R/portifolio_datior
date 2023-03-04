@@ -44,3 +44,57 @@
     color: var(--cor-texto);
 }
 
+@media screen and (min-width: 720px) {
+    
+    .projetos__div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .projeto-feito {
+        flex-direction: column;
+        padding: 2.5em 1em 0 1em;
+        margin: 1em;
+        gap: 0;
+        width: 300px;
+        height: 430px;
+    }   
+    
+    .projetos-img {
+        margin: 0;
+        border: 2px solid black;
+    }
+
+    .projetos-img img {
+        width: 120%;
+    }
+
+    .projeto-feito-texto h3 {
+        position: relative;
+        margin: 0.3em 0 0 0;
+        font-size: 24px;
+    }
+
+    #titulo-projeto-combo {
+        top: -200%;
+    }
+
+    #titulo-projeto-ecopoint {
+        top: -188%;
+    }
+
+    .projeto-feito-texto p {
+        position: relative;
+        top: -15%;
+    }
+
+    .projeto-feito-texto p:nth-of-type(1) {
+        color: var(--cor-titulos);
+    }
+
+    .projeto-texto__explicativo {
+        font-size: 18px;
+    }
+
+
+}

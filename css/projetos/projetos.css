@@ -1,3 +1,16 @@
 .projeto-titulo {
     margin: 0.5em 0;
 }
+
+@media screen and (min-width: 720px) {
+    
+    .projeto-titulo a {
+        width: 300px;
+    }
+
+    .projeto-feito {
+        width: 300px;
+        margin: 0;
+    }
+    
+}

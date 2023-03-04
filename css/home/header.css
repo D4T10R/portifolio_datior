@@ -1,6 +1,7 @@
 .cabecalho {
     background: var(--cor-fundo);
     border-radius: 10px 10px 0px 0px;
+    height: 4em;
 }
 
 .material-symbols-outlined {
@@ -39,3 +40,18 @@
     text-decoration: none;
 }
 
+@media screen and (min-width: 720px) {
+
+    .material-symbols-outlined {
+        position: absolute;
+        right: 1%;
+    }
+
+    .opcoes {
+        text-align: right;
+        padding: 0 1em;
+        right: 1%;
+        width: 18%;
+    }
+    
+}

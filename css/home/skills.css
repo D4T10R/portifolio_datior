@@ -18,3 +18,15 @@
 .skills__listas p {
     font-size: 20px;
 }
+
+@media screen and (min-width: 720px) {
+    .skills__listas li {
+        width: 30%;
+        justify-content: center;
+    }
+    
+    .skills__listas img {
+        width: 50%;
+    }
+
+}

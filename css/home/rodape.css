@@ -23,3 +23,15 @@
     min-width: 17%;
 }
                                                 
+
+@media screen and (min-width: 720px) {
+   
+    .rodape__titulo-contato {
+        font-size: 32px;
+    }
+
+    .rodape__tabela tr td {
+        font-size: 20px;
+    }
+
+}

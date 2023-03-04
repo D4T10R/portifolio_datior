@@ -68,3 +68,12 @@ body {
     font-weight: 800;
     color: var(--cor-titulos);
 }
+
+@media screen and (min-width: 720px) {
+    
+    .titulos {
+        font-size: 40px;
+        margin: 1em 0;
+    }
+
+}

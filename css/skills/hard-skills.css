@@ -14,3 +14,25 @@
     list-style: none;
     margin-bottom: 1.5em;
 }
+
+@media screen and (min-width: 720px) {
+    
+
+
+    .hard-skills li {
+        width: 30%;
+    }
+
+    .hard-skills img {
+        width: 50%;
+    }
+
+    .soft-skills__lista li {
+        width: 30%;
+    }
+
+    .soft-skills__lista img {
+        width: 50%;
+    }
+
+}

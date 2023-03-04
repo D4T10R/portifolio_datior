@@ -26,3 +26,17 @@
     font-weight: 700;
 
 }
+
+@media screen and (min-width: 720px) {
+    
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
+    .apresentacao__descricao__texto {
+        display: none;
+    }
+
+}
