@@ -21,7 +21,7 @@
     text-align: center;
     gap: 2em;
     background: var(--cor-fundo-projeto);
-    height: 6em;
+    height: 7em;
     width: 80%;
     margin: 0 0 5% 10%;
 }
@@ -40,12 +40,20 @@
 }
 
 .projeto-feito-texto p {
-    margin-top: 0.5em;
+    margin: 0.5em;
     color: var(--cor-texto);
+}
+
+.projeto__texto-descritivo {
+    display: none;
 }
 
 @media screen and (min-width: 720px) {
     
+    .projeto__texto-descritivo {
+        display: block;
+    }
+
     .projetos__div {
         display: flex;
         justify-content: space-evenly;

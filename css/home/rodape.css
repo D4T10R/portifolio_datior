@@ -21,6 +21,7 @@
 .rodape__tabela tr td {
     display: block;
     min-width: 17%;
+    max-width: 66%;
 }
                                                 
 

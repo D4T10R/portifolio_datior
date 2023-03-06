@@ -4,13 +4,44 @@
 
 @media screen and (min-width: 720px) {
     
-    .projeto-titulo a {
-        width: 300px;
+    .projeto-feito h3 {
+        position: relative;
+        top: -200%;
+    }
+
+    #titulo-ecopoint {
+        top: -230%;
+    }
+
+    .projetos-principais ul {
+        display: flex;
+        gap: 2em 3em;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .projetos-principais ul li {
+        display: block;
+    }
+
+    .link__projetos {
+        display: block;
+        width: 330px;
     }
 
     .projeto-feito {
         width: 300px;
         margin: 0;
+    }
+
+ 
+    .projetos-mais {
+        padding: 2em 0 0 0;
+    }
+
+    .projetos-mais a {
+        width: 330px;
+        margin: 0 auto;        
     }
     
 }
