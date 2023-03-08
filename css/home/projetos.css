@@ -67,6 +67,10 @@
         width: 300px;
         height: 430px;
     }   
+
+    .projeto-feito h3 {
+        top: -188%;
+    }
     
     .projetos-img {
         margin: 0;
@@ -83,13 +87,6 @@
         font-size: 24px;
     }
 
-    #titulo-projeto-combo {
-        top: -200%;
-    }
-
-    #titulo-projeto-ecopoint {
-        top: -188%;
-    }
 
     .projeto-feito-texto p {
         position: relative;

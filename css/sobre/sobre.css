@@ -28,3 +28,19 @@
     
     width: 90%;
 }
+
+@media screen and (min-width: 720px) {
+
+    .sobre__texto {
+        font-size: 18px; 
+    }
+
+    .sobre h3 {
+        margin-top: 6em;
+    }
+
+    .sobre iframe {
+        width: 520px;
+    }
+    
+}
