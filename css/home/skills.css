@@ -19,7 +19,9 @@
     font-size: 20px;
 }
 
+
 @media screen and (min-width: 720px) {
+
     .skills__listas li {
         width: 30%;
         justify-content: center;
@@ -27,6 +29,20 @@
     
     .skills__listas img {
         width: 50%;
+    }
+
+}
+
+
+@media screen and (min-width: 1220px) {
+    
+    .skills__listas li {
+
+        width: 20%;
+    }
+
+    .skills__listas img {
+        width: 40%;
     }
 
 }

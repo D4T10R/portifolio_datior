@@ -55,3 +55,31 @@
     }
     
 }
+
+@media screen and (min-width: 1220px) {
+    
+
+    .material-symbols-outlined {
+        display: none;
+    }
+
+    .opcoes {
+        display: block;
+        background: none;
+        border: none;
+        box-sizing: none;
+        padding: 1em;
+        width: 750px;
+        text-align: right;
+    }
+
+    .opcoes__lista {
+        display: flex;
+    }
+
+    .opcoes__itens {
+        margin: 0 0.5em;
+        text-transform: uppercase;
+    }
+
+}

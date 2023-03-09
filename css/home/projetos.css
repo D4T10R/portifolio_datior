@@ -8,7 +8,6 @@
     text-decoration: none;
 }
 
-
 .projetos__titulo {
     margin: 1.5em 0;
 }
@@ -45,6 +44,10 @@
 }
 
 .projeto__texto-descritivo {
+    display: none;
+}
+
+.projetos a:last-child {
     display: none;
 }
 
@@ -102,4 +105,19 @@
     }
 
 
+}
+
+
+
+@media screen and (min-width: 1220px) {
+
+    .projetos a:last-child {
+        display: block;
+    }
+
+    .projetos__div {
+        justify-content: center;
+        gap: 4em;
+    }
+    
 }

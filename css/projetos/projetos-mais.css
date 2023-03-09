@@ -6,3 +6,12 @@
     color: var(--cor-titulo-projeto);
     margin-bottom: 0.5em;
 }
+
+
+@media screen and (min-width: 1220px) {
+
+    .projeto-mais__titulo {
+        margin: 1em 0 2em 0;
+    }
+
+}

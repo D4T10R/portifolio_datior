@@ -26,6 +26,7 @@
     --cor-titulos: #70FF00;
     --cor-fundo-projeto: rgb(0, 15, 145, 0.5);
     --cor-titulo-projeto: #05FF00;
+    --cor-fundo-fundo: #13F2CA;
 
     --font-titulos: 'Tomorrow', sans-serif;
     --font-texto: 'Nova Round', cursive;
@@ -41,7 +42,7 @@ body {
     margin: 0em;
     font-family: var(--font-texto);
     color: var(--cor-texto);
-    background: #13F2CA;
+    background: var(--cor-fundo-fundo);
     padding: 8px;
 }
 
@@ -74,6 +75,26 @@ body {
     .titulos {
         font-size: 40px;
         margin: 1em 0;
+    }
+
+}
+
+@media screen and (min-width: 1220px) {
+    
+    .titulos {
+        font-size: 48px;
+    }
+
+    .inicio {
+        padding-top: 3em;
+    }
+
+    .inicio__titulo {
+        font-size: 48px;
+    }
+
+    .inicio img {
+        width: 180px;
     }
 
 }
