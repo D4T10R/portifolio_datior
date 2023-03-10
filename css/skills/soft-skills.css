@@ -14,3 +14,11 @@
     list-style: none;
     margin-top : 0.5em;
 }
+
+@media screen and (min-width: 1220px) {
+
+    .soft-skills__lista li {
+        width: 20%;
+    }
+
+}

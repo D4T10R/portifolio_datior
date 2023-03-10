@@ -52,3 +52,23 @@
     margin-top: 3em;
 
 }
+
+@media screen and (min-width: 1220px) {
+    
+    .inputs {
+        margin-left: 10%;
+        margin-top: 2em;
+    }
+
+    .inputs__campos input {
+        width: 500px;
+        font-size: 20px;
+        padding: 1em 0.5em 0.2em 0.5em;
+    }
+
+    .enviar {
+        margin-top: 5em;
+        width: 300px;
+    }
+
+}

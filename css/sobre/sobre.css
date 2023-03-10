@@ -40,7 +40,26 @@
     }
 
     .sobre iframe {
-        width: 520px;
+        margin-top: 10px;
+        width: 515px;
+        height: 290px;
+        border-radius: 50px;
     }
     
+}
+
+@media screen and (min-width: 1220px) {
+    
+    .sobre {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .sobre iframe {
+        margin-top: 30px;
+        width: 550px;
+        height: 310px;
+        border-radius: 50px;
+    }
+
 }
