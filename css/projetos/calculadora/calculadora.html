@@ -17,14 +17,53 @@
         padding: 0;
     }
 
+    @keyframes textoAparecendo {
+        from {font-size: 0px;}
+        to {font-size: 40px;}
+    }
+    :root {
+        --cor-de-fundo: linear-gradient(to bottom, rgb(48, 82, 146), rgb(115, 155, 223)); 
+        
+        --cor-calculadora: linear-gradient(to bottom, rgb(172, 139, 97), rgb(222, 184, 135));
+        --cor-borda-calculadora: rgb(0, 0, 0);
+
+        --cor-teclas: rgb(196, 190, 190);
+        --cor-teclas-destacadas: rgb(161, 156, 156);
+
+        --cor-campo-resultado: rgb(240, 248, 255);
+    }
+
     body {
-        background-color: cornflowerblue;
+        background-image: var(--cor-de-fundo);
+        height: 100vh;
+    }
+
+
+
+    .voltar {
+        position: absolute;
+        font-size: 60px;
+        left: 4%;
+        top: 2%;
+        color: black;
+        text-decoration: none;
+    }
+
+    .voltar:hover {
+        color: rgb(44, 43, 43);
     }
 
     .titulo {
         display: block;
         text-align: center;
         margin: 2em 0;
+        font-size: 40px;
+        animation-name: textoAparecendo;
+        animation-duration: 2s;
+    }
+
+    .titulo.style {
+        animation: 0.7s ease-in 1s 1 normal both running tracking-in-expand;
     }
 
     .calculadora {
@@ -33,9 +72,9 @@
         text-align: center;
         margin: 0 auto;
         padding: 1em;
-        background-color: burlywood;
+        background-image: var(--cor-calculadora);
         border-radius: 30px;
-        border: 0.5em solid black;
+        border: 0.5em solid var(--cor-borda-calculadora );
     }
 
     .calculadora h2 {
@@ -50,11 +89,12 @@
         padding-right: 0.5em;
         justify-content: right;
         align-items: center;
-        background-color: aliceblue;
+        background-color: var(--cor-teclas);
+        border: 2px solid;
         border-radius: 10px;
 
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 900;
     }
 
 
@@ -62,10 +102,20 @@
        padding: 0.5em;
     }
 
+
+
     .botao {
         width: 80px;
         height: 80px;
         font-size: 35px;
+        cursor: pointer;
+        border: 1px solid;
+        background: var(--cor-teclas);
+        transition-duration: 0.5s;
+    }
+
+    .botao:hover {
+        background: var(--cor-teclas-destacadas);
     }
   
     .botao-resultado {
@@ -81,44 +131,48 @@
 
 <body>
     
-    <h1 class="titulo">DATIOR CALCULADORA</h1>
+    <div class="conjunto-principal">
+        <a href="../../../html/projetos.html" class="voltar">←</a>
+        <h1 class="titulo">DATIOR CALCULADORA</h1>
+    </div>
+
 
     <div class="calculadora">
         <h2>Calculadora</h2>
         <p id="campo-impressao"></p>
-
+    
         <table class="calculadora__tabela">
             <tr>
                 <td><button class="botao" onclick="limpa()">c</button></td>
                 <td><button class="botao" onclick="apaga()"><</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('/')">/</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('*')">x</button></td>
+                <td><button class="botao teclado-exibicao">/</button></td>
+                <td><button class="botao teclado-exibicao">x</button></td>
             </tr>
 
             <tr>
-                <td><button class="botao teclado-exibicao" onclick="inserir('7')">7</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('8')">8</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('9')">9</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('+')">+</button></td>
+                <td><button class="botao teclado-exibicao">7</button></td>
+                <td><button class="botao teclado-exibicao">8</button></td>
+                <td><button class="botao teclado-exibicao">9</button></td>
+                <td><button class="botao teclado-exibicao">+</button></td>
             </tr>
 
             <tr>
-                <td><button class="botao teclado-exibicao" onclick="inserir('4')">4</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('5')">5</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('6')">6</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('-')">-</button></td>
+                <td><button class="botao teclado-exibicao">4</button></td>
+                <td><button class="botao teclado-exibicao">5</button></td>
+                <td><button class="botao teclado-exibicao">6</button></td>
+                <td><button class="botao teclado-exibicao">-</button></td>
             </tr>
 
             <tr>
-                <td><button class="botao teclado-exibicao" onclick="inserir('1')">1</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('2')">2</button></td>
-                <td><button class="botao teclado-exibicao" onclick="inserir('3')">3</button></td>
+                <td><button class="botao teclado-exibicao">1</button></td>
+                <td><button class="botao teclado-exibicao">2</button></td>
+                <td><button class="botao teclado-exibicao">3</button></td>
                 <td rowspan="2"><button class="botao botao-resultado" onclick="calcular()">=</button></td>
             </tr>
 
             <tr>
-                <td colspan="2"><button class="botao botao-zero" onclick="inserir('0')">0</button></td>
-                <td><button class="botao" onclick="inserir('.')">.</button></td>
+                <td colspan="2"><button class="botao botao-zero teclado-exibicao">0</button></td>
+                <td><button class="botao teclado-exibicao">.</button></td>
                
             </tr>
 
@@ -131,6 +185,16 @@
     <script>
 
         const campoExibicao = document.getElementById('campo-impressao')
+        const botoes = document.querySelectorAll('.teclado-exibicao')
+
+        botoes.forEach(botao => botao.addEventListener('click', () => {
+            if(botao.textContent == 'x') {
+                inserir('*');
+            } else {
+                inserir(botao.textContent)
+            }
+        }))
+
 
         function inserir(tecla) {
             campoExibicao.innerHTML += tecla
