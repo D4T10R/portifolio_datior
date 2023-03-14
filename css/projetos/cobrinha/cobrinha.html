@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datior joguinho</title>
+</head>
+
+<style>
+
+    :root {
+        --cor-fundo: rgb(88, 166, 255);
+        --cor-quadradinho: green;
+        --cor-caixa: rgb(119, 95, 175);
+        --cor-bolinha: red;
+    }
+
+    body {
+        background-color: var(--cor-fundo);
+    }
+
+    .caixa {
+        width: 900px;
+        height: 450px;
+        margin: 0 auto;
+        position: relative;
+        background-color: var(--cor-caixa);
+    }
+
+    .quadradinho {
+        position: absolute;
+        z-index: 1;
+        height: 45px;
+        width: 45px;
+        background-color: var(--cor-quadradinho);
+    }
+
+    .bolinha {
+        position: absolute;
+        z-index: 0;
+        height: 45px;
+        width: 45px;
+        background-color: var(--cor-bolinha);
+        border-radius: 200px;
+    }
+
+    .pontos {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .pontos strong {
+        color: rgb(153, 51, 51);
+        font-size: 70px;
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        .caixa {
+            width: 540px;
+            height: 270px;
+        }
+    }
+
+    @media screen and (max-width: 599px) {
+        .caixa {
+            width: 360px;
+            height: 180px;
+        }
+
+        .controle {
+            position: relative;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .base-controle {
+            width: 300px;
+            height: 300px;
+        }
+
+        .botao-controle {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+        }
+
+        .voltar {
+            position: absolute;
+            font-size: 60px;
+            left: 4%;
+            top: 90%;
+            color: black;
+            text-decoration: none;
+        }
+
+        .voltar:hover {
+            color: rgb(44, 43, 43);
+        }
+    }
+
+</style>
+
+<body>
+    
+    <main>
+
+        <div class="caixa">
+            <div class="quadradinho"></div>
+            <div class="bolinha"></div>
+        </div>
+
+        <p class="pontos"><strong>pontos:</strong> 0</p>
+
+        <div class="controle">
+            <img src="../../../img/quadradinho/botao-controle.svg" alt="" class="botao-controle botao-cima" style="left: 115px; top: 30px;">
+            <img src="../../../img/quadradinho/botao-controle.svg" alt="" class="botao-controle botao-direita" style="left: 215px; top: 115px;">
+            <img src="../../../img/quadradinho/botao-controle.svg" alt="" class="botao-controle botao-esquerda" style="left: 20px; top: 115px;">
+            <img src="../../../img/quadradinho/botao-controle.svg" alt="" class="botao-controle botao-direita" style="left: 115px; top: 200px;">
+            <img src="../../../img/quadradinho/base-controle.svg" alt="" class="base-controle">
+            
+        </div>
+
+        <a href="../../../html/projetos.html" class="voltar">←</a>
+
+    </main>
+
+    <script>
+
+        const quadrado = document.querySelector('.quadradinho')
+        const caixa = document.querySelector('.caixa')
+        const bola = document.querySelector('.bolinha')
+        const ponto = document.querySelector('.pontos')
+        const botoes = document.querySelectorAll('.botao-controle')
+        
+
+        console.log(botoes[1])
+
+        var pontos = -1;
+        var posicaoLeft = 0;
+        var posicaoTop = 0;
+
+        bolinhaAleatorio()
+
+
+        botoes[0].addEventListener('click', evento =>{
+            botoes[0].addEventListener('touchstart', () => botoes[0].src = '../../../img/quadradinho/botao-apertado.svg');
+            botoes[0].addEventListener('touchend', () => botoes[0].src = '../../../img/quadradinho/botao-controle.svg');
+            posicaoTop -= 45
+            posicaoTop < 0 ? perdeu() : movimenta()
+            if(quadrado.style.left === bola.style.left && quadrado.style.top === bola.style.top) {
+                bolinhaAleatorio()
+            }  
+        })
+
+        botoes[1].addEventListener('click', evento => {
+            botoes[1].addEventListener('touchstart', () => botoes[1].src = '../../../img/quadradinho/botao-apertado.svg');
+            botoes[1].addEventListener('touchend', () => botoes[1].src = '../../../img/quadradinho/botao-controle.svg');
+            posicaoLeft += 45;
+            posicaoLeft >= caixa.offsetWidth ? perdeu() : movimenta()
+            if(quadrado.style.left === bola.style.left && quadrado.style.top === bola.style.top) {
+                bolinhaAleatorio()
+            }  
+        })
+
+        botoes[2].addEventListener('click', evento => {
+            botoes[2].addEventListener('touchstart', () => botoes[2].src = '../../../img/quadradinho/botao-apertado.svg');
+            botoes[2].addEventListener('touchend', () => botoes[2].src = '../../../img/quadradinho/botao-controle.svg');
+            posicaoLeft -= 45
+            posicaoLeft < 0 ? perdeu() : movimenta()
+            if(quadrado.style.left === bola.style.left && quadrado.style.top === bola.style.top) {
+                bolinhaAleatorio()
+            }  
+        })
+
+        botoes[3].addEventListener('click', evento => {
+            botoes[3].addEventListener('touchstart', () => botoes[3].src = '../../../img/quadradinho/botao-apertado.svg');
+            posicaoTop += 45
+            posicaoTop >= caixa.offsetHeight ? perdeu() : movimenta()
+            botoes[3].addEventListener('touchend', () => botoes[3].src = '../../../img/quadradinho/botao-controle.svg');
+            if(quadrado.style.left === bola.style.left && quadrado.style.top === bola.style.top) {
+                bolinhaAleatorio()
+            }  
+        })
+
+  
+        document.addEventListener('keydown', evento => {
+
+            if(evento.code === "ArrowRight") {
+                posicaoLeft += 45;
+                posicaoLeft >= caixa.offsetWidth ? perdeu() : movimenta()
+            }
+
+            else if (evento.code === "ArrowLeft") {
+                posicaoLeft -= 45
+                posicaoLeft < 0 ? perdeu() : movimenta()
+            }
+
+
+            else if (evento.code === "ArrowDown") {
+                posicaoTop += 45
+                posicaoTop >= caixa.offsetHeight ? perdeu() : movimenta()
+
+            }
+
+            else if (evento.code === "ArrowUp") {
+                posicaoTop -= 45
+                posicaoTop < 0 ? perdeu() : movimenta()
+            
+            }           
+
+            if(quadrado.style.left === bola.style.left && quadrado.style.top === bola.style.top) {
+                bolinhaAleatorio()
+            }   
+        })
+
+
+        function movimenta() {
+            quadrado.style.top = `${posicaoTop}px`
+            quadrado.style.left = `${posicaoLeft}px`;
+        }
+
+        function perdeu() {
+            posicaoTop = 0
+            posicaoLeft = 0;
+            pontos = 0
+            ponto.textContent = `pontos: ${pontos}`
+            movimenta()
+            alert('perdeu')
+        }
+
+
+
+        function bolinhaAleatorio() {
+            bola.style.left = `${(Math.floor(Math.random() * (caixa.offsetWidth / 45))) * 45}px`
+            bola.style.top = `${Math.abs(Math.floor(Math.random() * (caixa.offsetHeight / 45))) * 45}px`
+            pontos += 1
+            ponto.textContent = `pontos: ${pontos}`
+        }
+
+      
+
+
+    </script>
+
+</body>
+
+<!--
+
+    \
+     \
+      \
+       \
+        \
+         \                                    
+         /                 _____________     o                         _ _ _ _ 
+        /        / \            |                   _ _ _ _ _ _      |        |
+       /       /    \          |            |      |           |    | \       |
+      /      /_______\         |            |     |            |    |  \ _ _ |
+     /     /          \       |            |      |           |    |    \ 
+    /    /             \      |            |     |_ _ _ _ _ _ |    |     \
+
+-->
+
+</html>
+
