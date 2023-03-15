@@ -55,20 +55,13 @@
         font-size: 70px;
     }
 
-    @media screen and (min-width: 600px) and (max-width: 900px) {
-        .caixa {
+    .caixa {
             width: 540px;
             height: 270px;
         }
-    }
-
-    @media screen and (max-width: 599px) {
-        .caixa {
-            width: 360px;
-            height: 180px;
-        }
 
         .controle {
+            display: none;
             position: relative;
             text-align: center;
             width: 300px;
@@ -99,6 +92,22 @@
         .voltar:hover {
             color: rgb(44, 43, 43);
         }
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        
+        .controle {
+            display: block;
+        }
+
+    }
+
+    @media screen and (max-width: 599px) {
+        .caixa {
+            width: 360px;
+            height: 180px;
+        }
+
+        
     }
 
 </style>
