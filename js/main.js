@@ -1,6 +1,7 @@
 const opcoes = document.querySelector('#opcoes').style
 const corpo = document.querySelector('#corpo')
 const rodape = document.querySelector('#rodape')
+const cabecalho = document.querySelector('.cabecalho')
 
 console.log(corpo)
         
@@ -26,6 +27,18 @@ function mostrarOpcoes() {
             opcoes.display = ""
         }
     })
+
+
+    cabecalho.addEventListener('click', () => {
+        if (opcoes.display === "block") {
+            opcoes.display = ""
+        }
+    })
+
+
+
+
+
 }
 
 /* ENVIAR FORMULARIO */
